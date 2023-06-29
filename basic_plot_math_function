@@ -1,0 +1,11 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+def plot_math_function(f, min_x, max_x, num_points):
+    f_vectorized = np.vectorize(f)
+    
+    x = np.linspace(-1, 10, 1000)
+    y = f_vectorized(x)
+    
+    plt.plot(x, y)
+    plt.show()
